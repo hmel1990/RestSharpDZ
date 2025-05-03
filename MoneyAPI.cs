@@ -31,7 +31,7 @@ namespace RestSharpDZ
 
                 request.AddParameter("date", today);
 
-                request.AddParameter("json", string.Empty);
+                request.AddParameter("json", "");
                 
                 var response = await client.ExecuteAsync(request);
 

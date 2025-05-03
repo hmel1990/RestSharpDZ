@@ -7,11 +7,10 @@
         {
             var moneyAPI = new MoneyAPI("https://bank.gov.ua/");
             var moneyRates = await moneyAPI.GetMoneyRatesAsync();
-            int i = 0;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             foreach (var rate in moneyRates)
             {
-                Console.WriteLine($" Курс {moneyAPI.moneyList[i]} на {rate} грн ");
-                i++;
+                Console.WriteLine(rate);
             }
         }
     }
